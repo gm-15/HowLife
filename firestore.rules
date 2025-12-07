@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 모든 요청은 인증된 사용자만 접근 가능
+    match /users/{uid} {
+      allow read, write: if request.auth != null && uid == request.auth.uid;
+
+      // survey
+      match /survey/{surveyId} {
+        allow read, write: if request.auth != null && uid == request.auth.uid;
+      }
+
+      // daily logs
+      match /daily_logs/{logId} {
+        allow read, write: if request.auth != null && uid == request.auth.uid;
+      }
+
+      // AI 추천 기록
+      match /ai_recommendations/{recId} {
+        allow read, write: if request.auth != null && uid == request.auth.uid;
+      }
+    }
+  }
+}
