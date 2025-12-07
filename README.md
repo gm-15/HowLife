@@ -52,55 +52,62 @@ HowLife/
 ├── firestore.rules                  # Database Security Rules
 ├── firestore.indexes.json           # DB Index Settings
 └── README.md
+```
 
+---
 
-🟣 실행 방법
-1. 프로젝트 클론
-Bash
+## 🟣 실행 방법
 
+### 1. 프로젝트 클론
+```bash
 git clone https://github.com/gm-15/HowLife.git
 cd HowLife
-2. Python 가상환경 생성 및 적용
-Windows
+```
 
-Bash
+### 2. Python 가상환경 생성 및 적용
 
+**Windows**
+```bash
 python -m venv .venv
 .venv\Scripts\activate
-macOS/Linux
+```
 
-Bash
-
+**macOS/Linux**
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
-3. 패키지 설치
-Bash
+```
 
+### 3. 패키지 설치
+```bash
 pip install -r requirements.txt
-4. 실행
-Bash
+```
 
+### 4. 실행
+```bash
 streamlit run Howlife-FrontEnd-main/app.py
-🔴 개발 기여 포인트 (Key Highlights)
-"단순 데이터 저장이 아니라, 사용자 행동 분석 후 AI 피드백 및 루틴 생성까지 제공합니다."
+```
 
-설문 사용자 데이터 기반 모델링: 단순 기록을 넘어 사용자 특성에 맞춘 데이터 구조 설계
+---
 
-Firebase Firestore 데이터 연동: 실시간 데이터 동기화 및 안정적인 저장소 구축
+## 🔴 개발 기여 포인트 (Key Highlights)
 
-Cloud Functions 기반 분석 API: 서버리스 환경에서의 효율적인 데이터 분석 로직 구현
+> ### "단순 데이터 저장이 아니라, 사용자 행동 분석 후 AI 피드백 및 루틴 생성까지 제공합니다."
 
-능동형 알림 확장 설계: 설문 분석 결과를 토대로 목표를 설정하고, 향후 FCM(Firebase Cloud Messaging)을 지원하도록 확장성 확보
+* **✔ 설문 사용자 데이터 기반 모델링**: 단순 기록을 넘어 사용자 특성에 맞춘 데이터 구조 설계
+* **✔ Firebase Firestore 데이터 연동**: 실시간 데이터 동기화 및 안정적인 저장소 구축
+* **✔ Cloud Functions 기반 분석 API**: 서버리스 환경에서의 효율적인 데이터 분석 로직 구현
+* **✔ 능동형 알림 확장 설계**: 설문 분석 결과를 토대로 목표를 설정하고, 향후 FCM(Firebase Cloud Messaging)을 지원하도록 확장성 확보
+* **✔ Streamlit UI 구성 및 상태 관리**: Python만으로 직관적이고 반응성 높은 웹 대시보드 구현
 
-Streamlit UI 구성 및 상태 관리: Python만으로 직관적이고 반응성 높은 웹 대시보드 구현
+---
 
-⚠️ 설정 및 주의사항
-GitHub 보안 정책에 따라 Firebase Private Key 및 Service Account Credentials는 리포지토리에 포함되어 있지 않습니다.
+## ⚠️ 설정 및 주의사항
+
+GitHub 보안 정책에 따라 **Firebase Private Key** 및 **Service Account Credentials**는 리포지토리에 포함되어 있지 않습니다.
 
 실제 실행을 위해서는 다음 단계가 필요합니다:
 
-Firebase Console 접속 및 Web App 생성
-
-Howlife-FrontEnd-main/firebase_client.py 파일을 엽니다.
-
-발급받은 API Key 및 설정 정보를 해당 파일에 입력하여 재설정해야 정상 작동합니다.
+1. **Firebase Console** 접속 및 Web App 생성
+2. `Howlife-FrontEnd-main/firebase_client.py` 파일을 엽니다.
+3. 발급받은 **API Key** 및 **설정 정보**를 해당 파일에 입력하여 재설정해야 정상 작동합니다.
