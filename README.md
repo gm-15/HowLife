@@ -51,7 +51,7 @@ HowLife/
 ├── firebase.json                    # Firebase Configuration
 ├── firestore.rules                  # Database Security Rules
 ├── firestore.indexes.json           # DB Index Settings
-└── README.md
+└── README.md```
 
 
 # HowLife Project Guide
@@ -61,31 +61,27 @@ HowLife/
 ### 1. 프로젝트 클론
 ```bash
 git clone [https://github.com/gm-15/HowLife.git](https://github.com/gm-15/HowLife.git)
-cd HowLife
+cd HowLife```
 
 2. Python 가상환경 생성 및 적용
 Windows
 
-Bash
+```python -m venv .venv
+.venv\Scripts\activate```
 
-python -m venv .venv
-.venv\Scripts\activate
 macOS/Linux
 
-Bash
+```python3 -m venv .venv
+source .venv/bin/activate```
 
-python3 -m venv .venv
-source .venv/bin/activate
 3. 패키지 설치
-Bash
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 4. 실행
-Bash
 
-streamlit run Howlife-FrontEnd-main/app.py
-🔴 개발 기여 포인트 (Key Highlights)
-"단순 데이터 저장이 아니라, 사용자 행동 분석 후 AI 피드백 및 루틴 생성까지 제공합니다."
+```streamlit run Howlife-FrontEnd-main/app.py```
+##🔴 개발 기여 포인트 (Key Highlights)
+###"단순 데이터 저장이 아니라, 사용자 행동 분석 후 AI 피드백 및 루틴 생성까지 제공합니다."
 
 ✔ 설문 사용자 데이터 기반 모델링: 단순 기록을 넘어 사용자 특성에 맞춘 데이터 구조 설계
 
@@ -97,7 +93,7 @@ streamlit run Howlife-FrontEnd-main/app.py
 
 ✔ Streamlit UI 구성 및 상태 관리: Python만으로 직관적이고 반응성 높은 웹 대시보드 구현
 
-⚠️ 설정 및 주의사항
+##⚠️ 설정 및 주의사항
 GitHub 보안 정책에 따라 Firebase Private Key 및 Service Account Credentials는 리포지토리에 포함되어 있지 않습니다.
 
 실제 실행을 위해서는 다음 단계가 필요합니다:
